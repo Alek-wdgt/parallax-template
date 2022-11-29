@@ -2,7 +2,7 @@
 <html class="no-js" lang="">
   <head>
     <meta charset="utf-8" />
-    <title></title>
+    <title>Multiple Parallax Efect</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -23,45 +23,43 @@
   <body>
     <!--Parallax section-->
     <header>
-      <div class="parallax">
-      <img
-      class="scene"
-      data-modifier="50"
-      src="https://pngfolio.com/images/all_img/copy/1661043603Cloud%20Png%20(53).png"
-    />
-    <img
-      class="scene"
-      data-modifier="15"
-      src="https://gallery.yopriceville.com/var/albums/Free-Clipart-Pictures/Winter-PNG/Snowy_Mountain_Transparent_PNG_Clipart.png?m=1633338087"
-    />
-    <img
-      class="scene"
-      data-modifier="1"
-      src="https://www.pngplay.com/wp-content/uploads/13/Forest-Transparent-PNG.png"
-    />
-  </div>
-
+      <div class="overlay">
+        <div class="parallax">
+          <h1>Multiple Parallax Efect</h1>
+          <div class="one"></div>
+          <div class="two"></div>
+          <div class="three"></div>
+        </div>
+      </div>
     </header>
     <!--Parallax section end-->
+    
     <!-- API Random users-->
-    <section class="users" id="users_data">
-     
-      
+    <section class="users" id="section">
+      <div class="container">
+        <div class="title p-3">
+          <h2 class="p-0 m-0 text-center">Random users</h2>
+        </div>
 
+        <div class="card-container" id="users_data">
+          
+        </div>
+      </div>
     </section>
     <!-- API Random users end-->
 
- 
-  
+    <footer>
+      <div clas="container text-center">
+        Prefferd stack for me will be vue, but didnt wanted to put too much
+        libraries/frameworks since I got parallax exterenal already
+      </div>
+    </footer>
 
-  
     <script src="js/vendor/modernizr-3.11.2.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script src="http://s.electerious.com/basicScroll/dist/basicScroll.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
-    <script>
-    
-    </script>
+    <script></script>
   </body>
 </html>

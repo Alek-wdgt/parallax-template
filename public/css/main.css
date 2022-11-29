@@ -1,30 +1,190 @@
-header {
-  min-height: 100%;
-  height: 125vh;
-  position: relative;
-  overflow: hidden;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: scroll;
+/*Colors */
+h1,
+.h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.625rem;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
 }
-.scene {
-  position: absolute;
-  width: 100%;
-  top: 0;
-  left: 0;
-  transform: translateY(var(--translateY));
-  will-change: transform;
+@media (min-width: 992px) {
+  h1,
+  .h1 {
+    font-size: 2.25rem;
+  }
 }
 
-.users {
-  background-color: grey;
+h2,
+.h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.375rem;
+  font-weight: 900;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+}
+@media (min-width: 992px) {
+  h2,
+  .h2 {
+    font-size: 1.75rem;
+  }
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  width: 100%;
+  position: relative;
+  margin: 0 auto;
+  position: relative;
+}
+
+.p-0 {
+  padding: 0;
+}
+
+.m-0 {
+  margin: 0;
+}
+
+.p-3 {
+  padding: 3rem 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+header {
+  position: relative;
+  height: 80vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #c6d9d3;
+}
+header .overlay {
   position: absolute;
-  top: 60vh;
+  top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+}
+header .overlay h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  margin: 0;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 4rem;
+  text-shadow: 25px -15px rgba(25, 42, 46, 0.04);
+  color: #142124;
+  /*mix-blend-mode: overlay;*/
+}
+header .overlay h1 span {
+  margin-top: -2em;
+  padding-top: 0.5em;
+  display: block;
+  letter-spacing: 5px;
+  font-size: 1.25rem;
+}
+
+footer {
+  background-color: #192a2e;
+  color: rgb(253, 255, 255);
+  padding: 1rem;
+}
+
+.parallax {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.parallax div {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: 0 50%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.parallax .one {
+  background-image: url("https://pngfolio.com/images/all_img/copy/1661043603Cloud%20Png%20(53).png");
+  z-index: 1;
+  top: -3rem;
+}
+.parallax .two {
+  background-image: url("https://gallery.yopriceville.com/var/albums/Free-Clipart-Pictures/Winter-PNG/Snowy_Mountain_Transparent_PNG_Clipart.png?m=1633338087");
+  z-index: 2;
+  top: 6.5rem;
+}
+.parallax .three {
+  background-image: url("https://www.pngplay.com/wp-content/uploads/13/Forest-Transparent-PNG.png");
+  z-index: 3;
+  top: 10rem;
+}
+
+.users {
+  background-color: rgb(16, 71, 70);
+  width: 100%;
+  height: 100%;
+}
+
+.card {
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  background-color: rgb(253, 255, 255);
+  border-radius: 0.25rem;
+  opacity: 0;
+}
+.card-container {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  background-color: rgb(16, 71, 70);
+  height: 100%;
+  overflow: auto;
+  flex-direction: row;
+}
+.card-user {
+  flex: 0 3 auto;
+  margin: 1rem;
+  width: 100%;
+  padding: 1rem;
+  max-width: 100%;
+}
+@media (min-width: 992px) {
+  .card-user {
+    max-width: calc(33.3333333333% - 4rem);
+  }
+}
+.card-user-title {
+  padding: 0.25rem 0;
+  text-decoration: underline;
+}
+.card-user-title span {
+  display: inline-block;
+  text-decoration: none;
+  padding-left: 0.25rem;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,18 +1,52 @@
-.users{
-    background-color: grey;
-    //TODO better solution?
-    position: absolute;
-    top: 60vh;
-    left: 0;
-    width: 100%;
-    height: 100%;
+.users {
+  background-color: $green-forest;
+  width: 100%;
+  height: 100%;
 }
-.card{
-    
-    &-user{
-        .title{
+.card {
+  @include box-shadow(
+    0 2px 2px 0 rgb(0 0 0 / 14%),
+    0 3px 1px -2px rgb(0 0 0 / 12%),
+    0 1px 5px 0 rgb(0 0 0 / 20%)
+  );
+  background-color: $white-light;
+  border-radius: 0.25rem;
+  opacity: 0;
+  &-container {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
 
-        }
-
+    background-color: $green-forest;
+    height: 100%;
+    overflow: auto;
+    flex-direction: row;
+  }
+  &-user {
+    flex: 0 3 auto;
+    margin: 1rem;
+    width: 100%;
+    padding: 1rem;
+    max-width: 100%;
+    @include min-width(desktop){
+        max-width: calc((100% / 3) - 4rem);
     }
+
+    
+    &-title {
+      padding: 0.25rem 0;
+      text-decoration: underline;
+
+      span {
+        display: inline-block;
+        text-decoration: none;
+        padding-left: 0.25rem;
+      }
+    }
+  }
 }

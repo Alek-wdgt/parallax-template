@@ -1,0 +1,13 @@
+/*Colors */
+$green-forest: rgba(16,71,70, 1);
+$white-light: rgba(253,255,255,1);
+$font-primary:'Montserrat', sans-serif;
+$breakpoints: (
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px,
+       
+        tablet: 768px, // same as md
+        desktop: 992px, // same as lg
+);
